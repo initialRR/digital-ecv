@@ -1,0 +1,68 @@
+/* Custom Global Utilities */
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Background Grid Pattern */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+@media (min-width: 640px) {
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Utility sembunyikan scrollbar horizontal di filter tab HP */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Sembunyikan kursor default desktop hanya jika mouse fisik terdeteksi */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  a, button, input, textarea, [role="button"] {
+    cursor: none !important;
+  }
+}
+
+/* State bouncy cursor saat hover elemen interaktif */
+#cursor-outline.cursor-hover {
+  width: 52px;
+  height: 52px;
+  background-color: rgba(6, 182, 212, 0.15);
+  border-color: rgba(6, 182, 212, 0.9);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.35);
+}
+
+#cursor-dot.cursor-hover {
+  transform: translate(-50%, -50%) scale(1.6);
+  background-color: #ffffff;
+}
